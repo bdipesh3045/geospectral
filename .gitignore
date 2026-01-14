@@ -1,0 +1,13 @@
+# --- System & Environment ---
+venv/
+.DS_Store
+__pycache__/
+*.pyc
+
+# --- Build & Distribution ---
+build/
+dist/
+*.egg-info/
+
+# --- Local Testing ---
+trial/
