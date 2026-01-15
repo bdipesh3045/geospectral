@@ -21,7 +21,9 @@ setup(
     ],
     install_requires=[
         "numpy",
-        "rasterio"
+        "rasterio",
+        "fiona",
+        "pandas"
     ],
    
     python_requires=">=3.10",
