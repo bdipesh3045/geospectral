@@ -10,7 +10,7 @@ setup(
     packages=find_packages(where="app"),
 
     long_description_content_type="text/markdown",
-    url="...",
+    url="https://github.com/bdipesh3045/geospectral",
     author="Dipesh Sharma",
     author_email="dipeshsharma9800@gmail.com",
     license="MIT",
