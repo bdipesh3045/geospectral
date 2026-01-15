@@ -11,6 +11,23 @@ GeoSpectral is a high-performance multispectral image augmentation library desig
 - **Automatic Worker Detection**: Intelligent worker allocation based on system resources, or manual configuration
 
 ## Getting Started
+
+
+
+**Import Packages**
+```python
+# Import Packages
+from augmentation import clip_raster_threaded,clip_raster_serial
+shape="data.shp"
+tiff="data.tif"
+
+)
+```
+
+
+
+
+
 **Non-threaded clipping:**
 ```python
 # Basic usage example
