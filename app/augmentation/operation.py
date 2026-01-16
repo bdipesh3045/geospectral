@@ -25,7 +25,7 @@ def save_tif(image, profile, path, original_min=None, original_max=None):
 
 
 
-def geometric_augmentations(image_path, aug_type, apply_all=False):
+def geometric_augmentations(image_path:str, aug_type:list, apply_all: bool = False):
     base_name = os.path.splitext(os.path.basename(image_path))[0]
     output_dir = base_name
     os.makedirs(output_dir, exist_ok=True)
