@@ -1,7 +1,7 @@
 import numpy as np
 import os
 import rasterio
-
+from .noise_mix import patchmix_from_paths
 
 
 
@@ -43,7 +43,7 @@ def add_gaussian_noise_tif(
     with rasterio.open(output_tif, "w", **meta) as dst:
         dst.write(noisy_img.astype(np.float32))
 
-    print(f"✅ Gaussian noise added and saved to: {output_tif}")
+   
 
 
 
@@ -70,20 +70,26 @@ def save_tif(image, profile, path, original_min=None, original_max=None):
 
 
 
-def geometric_augmentations(image_path:str, aug_type:list, apply_all: bool = False,noise:int=0):
+def geometric_augmentations(image_path:str, aug_type:list, apply_all: bool = False,noise:int=0,patchmix:bool=False):
     base_name = os.path.splitext(os.path.basename(image_path))[0]
     output_dir = base_name
     os.makedirs(output_dir, exist_ok=True)
-
-    if noise!=0:
-        noisy_output_path = os.path.join(
+    noisy_output_path = os.path.join(
             output_dir,
             f"{base_name}_NOISY.tif"
         )
+    if noise!=0:
         add_gaussian_noise_tif(
             input_tif=image_path,
             output_tif=noisy_output_path,
             noise_std=noise
+        )
+
+    if patchmix:
+        patchmix_from_paths(
+            clean_tif_path=image_path,
+            noisy_tif_path=noisy_output_path,
+            output_dir=output_dir
         )
 
     # Open image once
