@@ -1,11 +1,9 @@
 from setuptools import find_packages, setup
 
-
-
 setup(
     name="augmentation",
     version="0.0.10",
-    description="An id generator that generated various types and lengths ids",
+    description=open("README.md").read(),
     package_dir={"": "app"},
     packages=find_packages(where="app"),
 
