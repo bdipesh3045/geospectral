@@ -51,7 +51,14 @@ clip_raster_threaded(
 )
 ```
 
-## Installation
-```bash
-pip install geospectral
-```
+Here’s a friendly version with emojis:
+
+---
+
+Thank you for using **GeoSpectral**! 🎉
+If you have any questions or feedback, feel free to reach out at **📧 [dipeshsharma9800@gmail.com](mailto:dipeshsharma9800@gmail.com)** ✨
+
+---
+
+I can make an even shorter, punchy version with just 1–2 emojis if you want.
+
