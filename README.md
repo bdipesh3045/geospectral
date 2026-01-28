@@ -1,4 +1,4 @@
-# geospectral
+# Geospectral
 ## Overview
 GeoSpectral is a high-performance multispectral image augmentation library designed for efficient geospatial data processing.
 
