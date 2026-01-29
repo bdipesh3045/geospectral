@@ -1,9 +1,12 @@
 from setuptools import find_packages, setup
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setup(
-    name="augmentation",
-    version="0.0.10",
-    description=open("README.md").read(),
+    name="geospectral",
+    description="A Python package for augmenting geospatial raster data (GeoTIFFs) with various techniques including noise addition, patch mixing, and geometric transformations.",
+    version="0.2.3",
+    long_description=long_description,
     package_dir={"": "app"},
     packages=find_packages(where="app"),
 
